@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="aphcarios_project_list_action" model="ir.actions.act_window">
+    <field name="name">Aphcarios Projects</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">aphcarios.project</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+        Create a project!
+      </p>
+    </field>
+  </record>
+
+  <record id="aphcarios_project_form" model="ir.ui.view">
+    <field name="model">aphcarios.project</field>
+    <field name="name">aphcarios.project.form</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <style>
+              .aphcarios_project_image_field > img { max-width: 90px; height: auto} 
+              .oe_form .oe_form_field_image img { max-width:90px; height: auto }
+            </style>
+            <field name="avatar_image"  widget="image" nolabel="1" class="aphcarios_project_image_field" />
+          </group>
+          <group>
+            <group>
+              <field name="name" />
+              <field name="project_code" />
+              <field name="active" />
+            </group>
+            <group>
+              <field name="project_description" />
+            </group>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="aphcarios_project_tree" model="ir.ui.view">
+    <field name="model">aphcarios.project</field>
+    <field name="name">aphcarios.project.tree</field>
+    <field name="arch" type="xml">
+      <tree>
+        <!-- <field name="avatar_image"  widget="image" /> -->
+        <field name="name" string="Name" />
+        <field name="project_code" />
+        <field name="project_description" />
+      </tree>
+    </field>
+  </record>
+
+  <record id="aphcarios_project_search" model="ir.ui.view">
+    <field name="model">aphcarios.project</field>
+    <field name="name">aphcarios.project.search</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="name" filter_domain="['|',('name', 'ilike', self), ('project_code', 'ilike', self)]" />
+        <field name="project_code" />
+        <field name="project_description" />
+      </search>
+    </field>
+  </record>
+</odoo>
