@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem name="Aphcarios" id="aphcarios_project_menu" web_icon="aphcarios_project,static/icons/aph_logo.png" action="aphcarios_project_list_action" />
+    <menuitem name="Aphcarios" id="aphcarios_project_menu" web_icon="aphcarios_module,static/icons/aph_logo.png" action="aphcarios_project_list_action" />
     <!-- <menuitem name="Aphcarios" id="aphcarios_project_menu" web_icon="aphcarios_project,static/icons/aph_logo.png" action="aphcarios_project_overview_action" /> -->
     <!-- <menuitem name="Overview" id="aphcarios_project_overview_menuitem" parent="aphcarios_project_menu" action="aphcarios_project_overview_action" /> -->
     <menuitem name="Projects" id="aphcarios_project_projects_menuitem" parent="aphcarios_project_menu" />
